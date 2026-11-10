@@ -11,7 +11,11 @@ import numpy as np
 
 
 def head_features(pattern):
-    """Return role-relevant statistics for one attention head."""
+    """Return role-relevant statistics for one attention head.
+
+    All mass features are fractions of total attention mass, so a
+    concentrated pattern always sums to 1 across the regions.
+    """
     p = np.asarray(pattern, dtype=float)
     if p.ndim != 2 or p.shape[0] != p.shape[1]:
         raise ValueError("pattern must be a square (T, T) matrix")
@@ -24,7 +28,7 @@ def head_features(pattern):
     else:
         prev_mass = 0.0
     band = np.abs(idx[:, None] - idx[None, :]) <= 2
-    band_mass = float(np.mean(p[band]))
+    band_mass = float(np.sum(p[band]) / t) if band.any() else 0.0
     far = np.abs(idx[:, None] - idx[None, :]) > max(2, t // 4)
     far_mass = float(np.sum(p[far]) / t) if far.any() else 0.0
     safe = np.clip(p, 1e-12, None)
