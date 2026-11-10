@@ -13,4 +13,4 @@ E   ImportError: cannot import name 'classify_head' from 'head_detective.detecti
 =========================== short test summary info ============================
 ERROR tests/test_detective.py
 !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-1 error in 0.21s
+1 error in 0.16s
