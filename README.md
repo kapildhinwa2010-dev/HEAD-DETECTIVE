@@ -1,5 +1,7 @@
 # HEAD-DETECTIVE
 
+[![Stars](https://img.shields.io/github/stars/kapildhinwa2010-dev/HEAD-DETECTIVE?style=flat-square)](https://github.com/kapildhinwa2010-dev/HEAD-DETECTIVE/stargazers) [![Forks](https://img.shields.io/github/forks/kapildhinwa2010-dev/HEAD-DETECTIVE?style=flat-square)](https://github.com/kapildhinwa2010-dev/HEAD-DETECTIVE/network/members) [![Issues](https://img.shields.io/github/issues/kapildhinwa2010-dev/HEAD-DETECTIVE?style=flat-square)](https://github.com/kapildhinwa2010-dev/HEAD-DETECTIVE/issues) [![Top language](https://img.shields.io/github/languages/top/kapildhinwa2010-dev/HEAD-DETECTIVE?style=flat-square)](https://github.com/kapildhinwa2010-dev/HEAD-DETECTIVE)
+
 Classify what every attention head actually does, straight from its attention patterns.
 
 Given attention matrices, HEAD-DETECTIVE computes per-head statistics (diagonal mass, previous-token mass, band mass, long-range mass, entropy, sink mass) and assigns each head a role label with a confidence score: **previous-token**, **local**, **diffuse**, **long-range**, **sink**, or **mixed**.
